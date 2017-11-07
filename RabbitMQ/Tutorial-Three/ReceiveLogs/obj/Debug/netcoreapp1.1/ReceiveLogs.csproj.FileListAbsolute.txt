@@ -1,0 +1,8 @@
+C:\WorkSpace\RabbitMQ\Tutorial-Three\ReceiveLogs\bin\Debug\netcoreapp1.1\ReceiveLogs.deps.json
+C:\WorkSpace\RabbitMQ\Tutorial-Three\ReceiveLogs\bin\Debug\netcoreapp1.1\ReceiveLogs.runtimeconfig.json
+C:\WorkSpace\RabbitMQ\Tutorial-Three\ReceiveLogs\bin\Debug\netcoreapp1.1\ReceiveLogs.runtimeconfig.dev.json
+C:\WorkSpace\RabbitMQ\Tutorial-Three\ReceiveLogs\bin\Debug\netcoreapp1.1\ReceiveLogs.dll
+C:\WorkSpace\RabbitMQ\Tutorial-Three\ReceiveLogs\bin\Debug\netcoreapp1.1\ReceiveLogs.pdb
+C:\WorkSpace\RabbitMQ\Tutorial-Three\ReceiveLogs\obj\Debug\netcoreapp1.1\ReceiveLogs.AssemblyInfo.cs
+C:\WorkSpace\RabbitMQ\Tutorial-Three\ReceiveLogs\obj\Debug\netcoreapp1.1\ReceiveLogs.dll
+C:\WorkSpace\RabbitMQ\Tutorial-Three\ReceiveLogs\obj\Debug\netcoreapp1.1\ReceiveLogs.pdb

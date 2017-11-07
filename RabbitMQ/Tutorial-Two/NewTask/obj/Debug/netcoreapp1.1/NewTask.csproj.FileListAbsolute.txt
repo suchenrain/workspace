@@ -1,0 +1,9 @@
+C:\WorkSpace\RabbitMQ\Tutorial-Two\NewTask\bin\Debug\netcoreapp1.1\NewTask.deps.json
+C:\WorkSpace\RabbitMQ\Tutorial-Two\NewTask\bin\Debug\netcoreapp1.1\NewTask.runtimeconfig.json
+C:\WorkSpace\RabbitMQ\Tutorial-Two\NewTask\bin\Debug\netcoreapp1.1\NewTask.runtimeconfig.dev.json
+C:\WorkSpace\RabbitMQ\Tutorial-Two\NewTask\bin\Debug\netcoreapp1.1\NewTask.dll
+C:\WorkSpace\RabbitMQ\Tutorial-Two\NewTask\bin\Debug\netcoreapp1.1\NewTask.pdb
+C:\WorkSpace\RabbitMQ\Tutorial-Two\NewTask\obj\Debug\netcoreapp1.1\NewTask.AssemblyInfo.cs
+C:\WorkSpace\RabbitMQ\Tutorial-Two\NewTask\obj\Debug\netcoreapp1.1\NewTask.dll
+C:\WorkSpace\RabbitMQ\Tutorial-Two\NewTask\obj\Debug\netcoreapp1.1\NewTask.pdb
+C:\WorkSpace\RabbitMQ\Tutorial-Two\NewTask\obj\Debug\netcoreapp1.1\NewTask.csprojResolveAssemblyReference.cache

@@ -1,0 +1,8 @@
+C:\WorkSpace\RabbitMQ\Tutorial-Two\Worker\bin\Debug\netcoreapp1.1\Worker.deps.json
+C:\WorkSpace\RabbitMQ\Tutorial-Two\Worker\bin\Debug\netcoreapp1.1\Worker.runtimeconfig.json
+C:\WorkSpace\RabbitMQ\Tutorial-Two\Worker\bin\Debug\netcoreapp1.1\Worker.runtimeconfig.dev.json
+C:\WorkSpace\RabbitMQ\Tutorial-Two\Worker\bin\Debug\netcoreapp1.1\Worker.dll
+C:\WorkSpace\RabbitMQ\Tutorial-Two\Worker\bin\Debug\netcoreapp1.1\Worker.pdb
+C:\WorkSpace\RabbitMQ\Tutorial-Two\Worker\obj\Debug\netcoreapp1.1\Worker.AssemblyInfo.cs
+C:\WorkSpace\RabbitMQ\Tutorial-Two\Worker\obj\Debug\netcoreapp1.1\Worker.dll
+C:\WorkSpace\RabbitMQ\Tutorial-Two\Worker\obj\Debug\netcoreapp1.1\Worker.pdb

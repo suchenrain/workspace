@@ -1,0 +1,8 @@
+C:\WorkSpace\RabbitMQ\Tutorial-One\Send\bin\Debug\netcoreapp1.1\Send.deps.json
+C:\WorkSpace\RabbitMQ\Tutorial-One\Send\bin\Debug\netcoreapp1.1\Send.runtimeconfig.json
+C:\WorkSpace\RabbitMQ\Tutorial-One\Send\bin\Debug\netcoreapp1.1\Send.runtimeconfig.dev.json
+C:\WorkSpace\RabbitMQ\Tutorial-One\Send\bin\Debug\netcoreapp1.1\Send.dll
+C:\WorkSpace\RabbitMQ\Tutorial-One\Send\bin\Debug\netcoreapp1.1\Send.pdb
+C:\WorkSpace\RabbitMQ\Tutorial-One\Send\obj\Debug\netcoreapp1.1\Send.AssemblyInfo.cs
+C:\WorkSpace\RabbitMQ\Tutorial-One\Send\obj\Debug\netcoreapp1.1\Send.dll
+C:\WorkSpace\RabbitMQ\Tutorial-One\Send\obj\Debug\netcoreapp1.1\Send.pdb
