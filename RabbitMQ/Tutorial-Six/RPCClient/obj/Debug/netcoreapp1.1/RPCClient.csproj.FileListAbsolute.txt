@@ -1,8 +1,0 @@
-C:\WorkSpace\RabbitMQ\Tutorial-Six\RPCClient\bin\Debug\netcoreapp1.1\RPCClient.deps.json
-C:\WorkSpace\RabbitMQ\Tutorial-Six\RPCClient\bin\Debug\netcoreapp1.1\RPCClient.runtimeconfig.json
-C:\WorkSpace\RabbitMQ\Tutorial-Six\RPCClient\bin\Debug\netcoreapp1.1\RPCClient.runtimeconfig.dev.json
-C:\WorkSpace\RabbitMQ\Tutorial-Six\RPCClient\bin\Debug\netcoreapp1.1\RPCClient.dll
-C:\WorkSpace\RabbitMQ\Tutorial-Six\RPCClient\bin\Debug\netcoreapp1.1\RPCClient.pdb
-C:\WorkSpace\RabbitMQ\Tutorial-Six\RPCClient\obj\Debug\netcoreapp1.1\RPCClient.AssemblyInfo.cs
-C:\WorkSpace\RabbitMQ\Tutorial-Six\RPCClient\obj\Debug\netcoreapp1.1\RPCClient.dll
-C:\WorkSpace\RabbitMQ\Tutorial-Six\RPCClient\obj\Debug\netcoreapp1.1\RPCClient.pdb

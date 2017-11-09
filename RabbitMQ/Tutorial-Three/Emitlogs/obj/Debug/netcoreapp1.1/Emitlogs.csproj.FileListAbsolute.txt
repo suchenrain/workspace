@@ -1,8 +1,0 @@
-C:\WorkSpace\RabbitMQ\Tutorial-Three\Emitlogs\bin\Debug\netcoreapp1.1\Emitlogs.deps.json
-C:\WorkSpace\RabbitMQ\Tutorial-Three\Emitlogs\bin\Debug\netcoreapp1.1\Emitlogs.runtimeconfig.json
-C:\WorkSpace\RabbitMQ\Tutorial-Three\Emitlogs\bin\Debug\netcoreapp1.1\Emitlogs.runtimeconfig.dev.json
-C:\WorkSpace\RabbitMQ\Tutorial-Three\Emitlogs\bin\Debug\netcoreapp1.1\Emitlogs.dll
-C:\WorkSpace\RabbitMQ\Tutorial-Three\Emitlogs\bin\Debug\netcoreapp1.1\Emitlogs.pdb
-C:\WorkSpace\RabbitMQ\Tutorial-Three\Emitlogs\obj\Debug\netcoreapp1.1\Emitlogs.AssemblyInfo.cs
-C:\WorkSpace\RabbitMQ\Tutorial-Three\Emitlogs\obj\Debug\netcoreapp1.1\Emitlogs.dll
-C:\WorkSpace\RabbitMQ\Tutorial-Three\Emitlogs\obj\Debug\netcoreapp1.1\Emitlogs.pdb

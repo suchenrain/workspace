@@ -1,8 +1,0 @@
-C:\WorkSpace\RabbitMQ\Tutorial-Six\RPCServer\bin\Debug\netcoreapp1.1\RPCServer.deps.json
-C:\WorkSpace\RabbitMQ\Tutorial-Six\RPCServer\bin\Debug\netcoreapp1.1\RPCServer.runtimeconfig.json
-C:\WorkSpace\RabbitMQ\Tutorial-Six\RPCServer\bin\Debug\netcoreapp1.1\RPCServer.runtimeconfig.dev.json
-C:\WorkSpace\RabbitMQ\Tutorial-Six\RPCServer\bin\Debug\netcoreapp1.1\RPCServer.dll
-C:\WorkSpace\RabbitMQ\Tutorial-Six\RPCServer\bin\Debug\netcoreapp1.1\RPCServer.pdb
-C:\WorkSpace\RabbitMQ\Tutorial-Six\RPCServer\obj\Debug\netcoreapp1.1\RPCServer.AssemblyInfo.cs
-C:\WorkSpace\RabbitMQ\Tutorial-Six\RPCServer\obj\Debug\netcoreapp1.1\RPCServer.dll
-C:\WorkSpace\RabbitMQ\Tutorial-Six\RPCServer\obj\Debug\netcoreapp1.1\RPCServer.pdb

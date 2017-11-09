@@ -1,0 +1,10 @@
+*.cache
+*.suo
+*.user
+_ReSharper.*
+bin
+obj
+packages
+Debug/
+Release/
+*.log
