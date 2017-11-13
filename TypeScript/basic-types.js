@@ -33,6 +33,18 @@ console.log(x[1].toString());
 x[2] = "nihao";
 x[4] = 121;
 x[3] = "hh";
+//x[5]=true; //error!
 console.log(x[2].toString());
 console.log(x[3].toString());
 console.log(x[4].toString());
+//******Enum*******
+var Color;
+(function (Color) {
+    Color[Color["Red"] = 1] = "Red";
+    Color[Color["Green"] = 2] = "Green";
+    Color[Color["Blue"] = 3] = "Blue";
+})(Color || (Color = {}));
+;
+var c = Color.Blue;
+var colorName = Color[2];
+console.log(colorName);

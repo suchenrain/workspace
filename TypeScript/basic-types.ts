@@ -48,3 +48,10 @@ x[3]="hh";
 console.log(x[2].toString());
 console.log(x[3].toString());
 console.log(x[4].toString());
+
+//******Enum*******
+enum Color{Red=1,Green,Blue};
+let c:Color=Color.Blue;
+
+let colorName:string=Color[2];
+console.log(colorName);
