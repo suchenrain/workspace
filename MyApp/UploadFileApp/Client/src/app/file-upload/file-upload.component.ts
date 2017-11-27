@@ -11,7 +11,7 @@ export class FileUploadComponent implements OnInit {
   dragAreaClass: string = 'dragarea';
   @Input() projectId: number = 0;
   @Input() sectionId: number = 0;
-  @Input() fileExt: string = "JPG,GIF,PNG";
+  @Input() fileExt: string = "JPG,GIF,PNG,JPEG";
   @Input() maxFiles: number = 5;
   @Input() maxSize: number = 5;//5MB
   @Output() uploadStatus = new EventEmitter();

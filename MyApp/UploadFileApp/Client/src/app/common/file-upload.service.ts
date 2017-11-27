@@ -7,15 +7,15 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class FileUploadService {
 
-  private baseURL: string = 'http://localhost:xxxx/api/fileupload/';
+  private baseURL: string = 'http://localhost:8100/api/fileupload';
 
   constructor(private http: Http) { }
 
   upload(files, parameters) {
     let headers = new Headers();
     let options = new RequestOptions({ headers: headers });
-    options.params = parameters;
-    return this.http.post(this.baseURL + "upload", files, options)
+   // options.params = parameters;
+    return this.http.post(this.baseURL, files, options)
       .map(response => response.json())
       .catch(error => Observable.throw(error));
 
