@@ -34,3 +34,15 @@
     box-shadow: 0 0 6px 2px rgba(85, 176, 245, 0.4);
     border-radius: .1rem;
 }
+.result-box{
+    margin-top: 40px
+}
+.result-box p{
+    font-size: 1rem;
+    color: #999;
+}
+.result-box p>span{
+    margin-left: 0.1rem;
+    color:#5bb6f7;
+
+}

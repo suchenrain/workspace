@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FileUploader, FileDropDirective, FileSelectDirective } from "ng2-file-upload";
 
-type UploadResult ={
+class UploadResult {
   status: number;
   message: string;
   data: string;
@@ -20,10 +20,12 @@ export class AppComponent {
   public uploader: FileUploader = new FileUploader({ url: URL, autoUpload: true, removeAfterUpload: true });
   public hasBaseDropZoneOver: boolean = false;
   public hasAnotherDropZoneOver: boolean = false;
-  public results: UploadResult ;
+  public results: UploadResult = { status: 0, message: '', data: '' };
 
   constructor() {
-    this.uploader.onCompleteItem = this.handleResults;
+    this.uploader.onCompleteItem=(item: any, response: any, status: any, headers: any)=>{
+     this.handleResults(item,response,status,headers);
+    };
   }
   public fileOverBase(e: any): void {
     this.hasBaseDropZoneOver = e;
