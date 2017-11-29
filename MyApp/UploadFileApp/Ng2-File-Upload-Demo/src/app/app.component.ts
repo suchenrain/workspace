@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,ViewChild } from '@angular/core';
 import { FileUploader, FileDropDirective, FileSelectDirective } from "ng2-file-upload";
 
 class UploadResult {
@@ -21,6 +21,7 @@ export class AppComponent {
   public hasBaseDropZoneOver: boolean = false;
   public hasAnotherDropZoneOver: boolean = false;
   public results: UploadResult = { status: 0, message: '', data: '' };
+  @ViewChild('file') fileInput: any;
 
   constructor() {
     this.uploader.onCompleteItem=(item: any, response: any, status: any, headers: any)=>{
@@ -36,6 +37,9 @@ export class AppComponent {
   }
 
   private handleResults(item: any, response: any, status: any, headers: any): void {
+    // (resolve)Re-select the same file doesn't work
+    this.fileInput.nativeElement.value = '';
+
     switch (status) {
       case 415: console.log("unsupport file type!");
         this.results.status = status;
@@ -45,7 +49,7 @@ export class AppComponent {
       case 200: console.log("upload successfully!");
         this.results.status = status;
         this.results.message = 'upload successfully!';
-        this.results.data = response;
+        this.results.data = JSON.stringify(JSON.parse(response), null, 2);;
         break;
       default: console.log("an error occurred! Please try again later!");
         this.results.status = status;

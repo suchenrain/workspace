@@ -48,3 +48,9 @@ var Color;
 var c = Color.Blue;
 var colorName = Color[2];
 console.log(colorName);
+/* Any */
+var notSure = 4;
+notSure = "this is a string";
+notSure = true;
+notSure.ifItExist();
+notSure.toFixed();

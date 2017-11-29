@@ -46,3 +46,12 @@
     color:#5bb6f7;
 
 }
+.result-box pre{
+    height: auto;
+    max-height: 300px;
+    overflow: auto;
+    background-color: #f9f9f9;
+    word-break: normal !important;
+    word-wrap: normal !important;
+    white-space: pre !important;
+}
