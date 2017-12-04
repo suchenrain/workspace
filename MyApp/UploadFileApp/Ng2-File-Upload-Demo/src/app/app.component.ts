@@ -1,65 +1,12 @@
-import { Component,ViewChild } from '@angular/core';
-import { FileUploader, FileDropDirective, FileSelectDirective } from "ng2-file-upload";
+import { Component } from '@angular/core';
 
-class UploadResult {
-  status: number;
-  message: string;
-  data: string;
-}
-
-// const URL = '/api/';
-const URL = 'http://localhost:8100/api/fileupload';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Ng2-File-Upload-Demo';
-
-  public uploader: FileUploader = new FileUploader({ url: URL, autoUpload: true, removeAfterUpload: true });
-  public hasBaseDropZoneOver: boolean = false;
-  public hasAnotherDropZoneOver: boolean = false;
-  public results: UploadResult = { status: 0, message: '', data: '' };
-  @ViewChild('file') fileInput: any;
-
-  constructor() {
-    this.uploader.onCompleteItem=(item: any, response: any, status: any, headers: any)=>{
-     this.handleResults(item,response,status,headers);
-    };
-  }
-  public fileOverBase(e: any): void {
-    this.hasBaseDropZoneOver = e;
-  }
-
-  public fileOverAnother(e: any): void {
-    this.hasAnotherDropZoneOver = e;
-  }
-
-  private handleResults(item: any, response: any, status: any, headers: any): void {
-    // (resolve)Re-select the same file doesn't work
-    this.fileInput.nativeElement.value = '';
-
-    switch (status) {
-      case 415: console.log("unsupport file type!");
-        this.results.status = status;
-        this.results.message = 'unsupport file type!';
-        this.results.data = null;
-        break;
-      case 200: console.log("upload successfully!");
-        this.results.status = status;
-        this.results.message = 'upload successfully!';
-        this.results.data = JSON.stringify(JSON.parse(response), null, 2);;
-        break;
-      default: console.log("an error occurred! Please try again later!");
-        this.results.status = status;
-        this.results.message = 'an error occurred!';
-        this.results.data = null;
-        break;
-    }
-  }
-
-
+  title = 'File Upload Demo';
 }
 
 

@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-md-12 upload-area">
+
+        <h3>Select Pictures</h3>
+
+        <div ng2FileDrop [ngClass]="{'nv-file-over': hasBaseDropZoneOver,'box-hidden':uploader.isUploading}" (fileOver)="fileOverBase($event)"
+            [uploader]="uploader" class="my-drop-zone">
+            <a href="javascript:void(0)" (click)="file.click()">
+                Click to browse
+            </a>
+            Or Drag & Drop to upload your files
+            <input type="file" #file ng2FileSelect [uploader]="uploader" style="display:none;" />
+        </div>
+        <div class="process-tips" [ngClass]="{'box-hidden':!uploader.isUploading}">
+            <i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>
+            <span>Processing...</span>
+        </div>
+
+    </div>
+    <div class="col-md-12 result-box" >
+
+        <h3>Response</h3>
+        <p>StatusCode: <span>{{results.statusCode}}</span></p>
+        <p>Message: <span>{{results.message}}</span></p>
+        <pre>{{results.data}}</pre>
+
+
+    </div>
+
+
+</div>
