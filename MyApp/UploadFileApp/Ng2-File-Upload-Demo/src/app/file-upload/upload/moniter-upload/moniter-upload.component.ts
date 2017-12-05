@@ -10,7 +10,7 @@ const allowdTypes: Array<string> = ['application/octet-stream'];
 @Component({
   selector: 'app-moniter-upload',
   templateUrl: './moniter-upload.component.html',
-  styleUrls: ['./moniter-upload.component.css'],
+  styles: [require('./moniter-upload.component.css')],
   animations:[slideInDownAnimation]
 })
 export class MoniterUploadComponent implements OnInit {
