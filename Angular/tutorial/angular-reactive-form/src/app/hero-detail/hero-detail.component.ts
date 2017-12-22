@@ -7,7 +7,9 @@ import { FormControl, FormGroup } from "@angular/forms";
   styleUrls: ['./hero-detail.component.css']
 })
 export class HeroDetailComponent implements OnInit {
-
+  heroForm=new FormGroup({
+    'name':new formcon
+  })
   name = new FormControl();
 
   constructor() { }
