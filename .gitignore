@@ -61,3 +61,6 @@ Thumbs.db
 *.7z
 *.rar
 
+
+.sass-cache
+
