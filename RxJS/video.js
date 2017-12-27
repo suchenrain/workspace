@@ -47,8 +47,8 @@ mouseDown.filter(e => video.classList.contains('video-fixed'))
 .concatAll()
 .withLatestFrom(mouseDown, (move, down) => {
     return {
-        x: validValue(move.clientX - down.offsetX,window.innerWidth-320,0),
-        y: validValue(move.clientY - down.offsetY,window.innerHeight-180,0)
+        x: validValue(move.clientX - down.offsetX,window.innerWidth-video.getBoundingClientRect().width,0),
+        y: validValue(move.clientY - down.offsetY,window.innerHeight-video.getBoundingClientRect().height,0)
     }
 })
 .subscribe(pos => {
