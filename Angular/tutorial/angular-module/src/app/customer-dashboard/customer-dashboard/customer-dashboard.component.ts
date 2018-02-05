@@ -9,8 +9,8 @@ import { UserService } from '@app/core';
 })
 export class CustomerDashboardComponent implements OnInit {
 
-  public isAvailable: boolean = true;
-  public age: number = 0;
+  public isAvailable = true;
+  public age = 0;
   constructor(private userService: UserService) {
     console.log(userService);
   }
