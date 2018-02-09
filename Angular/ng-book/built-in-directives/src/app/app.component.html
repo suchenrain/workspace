@@ -1,0 +1,28 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<div>
+  <h3>NgIf</h3>
+  <div *ngIf="false"></div>
+  <div *ngIf="a>b">a>b</div>
+  <div *ngIf="str=='yes'">str equal to 'yes'</div>
+  <div *ngIf="myFunc()">myFunc() return true</div>
+</div>
+<div class="container" [ngSwitch]="myVar">
+  <h3>NgSwitch</h3>
+  <button (click)="increase()">+1</button>
+  <button (click)="decrease()">-1</button>
+  <div *ngSwitchCase='1'>myVar is 1</div>
+  <div *ngSwitchCase='2'>myVar is 2</div>
+  <div *ngSwitchCase='3'>myVar is 3</div>
+  <div *ngSwitchDefault>myVar is else</div>
+</div>
+
+<div class="container" [ngSwitch]="myVar">
+  <h3>NgStyle</h3>
+  <pre>single css property: [style.&lt;cssproperty&gt;='value']</pre>
+  <div [style.background-color]="'yellow'">yellow background</div>
+</div>
