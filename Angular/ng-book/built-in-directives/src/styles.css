@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+.bordered{
+    border:1px dashed black;
+    background-color: #eee;
+    padding: .2em 0 .2em .2em;
+}

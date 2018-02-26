@@ -21,8 +21,121 @@
   <div *ngSwitchDefault>myVar is else</div>
 </div>
 
-<div class="container" [ngSwitch]="myVar">
+<div class="container">
   <h3>NgStyle</h3>
-  <pre>single css property: [style.&lt;cssproperty&gt;='value']</pre>
+  <div>1.single css property: [style.&lt;cssproperty&gt;='value']</div>
   <div [style.background-color]="'yellow'">yellow background</div>
+  <div>2.using key value pairs for each property</div>
+  <div [ngStyle]="{color:'white','background-color':'blue'}">Uses fixed white text on blun background.</div>
+  <div>3.using dynamic values</div>
+  <div>
+    <input type="text" name="color" value="{{color}}" placeholder="color" ref-colorinput>
+  </div>
+  <div>
+    <input type="text" name="fontSize" value="{{fontSize}}" placeholder="fontsize" ref-fontinput>
+  </div>
+  <button (click)="apply(colorinput.value,fontinput.value)">Apply</button>
+  <div>
+    <div [style.background-color]="color">dynamic backgroud color {{ color }} </div>
+    <div [style.font-size.em]="fontSize">dynamic font size {{ fontSize }} em</div>
+  </div>
+</div>
+<div class="container">
+  <h3>NgClass</h3>
+  <div [ngClass]="{bordered:false}">this is never bordered</div>
+  <div [ngClass]="{bordered:true}">this is never bordered</div>
+
+  <button (click)="toggleBordered()">toggle</button>
+  <div [ngClass]="{bordered:isbordered}">
+    using object literal. bordered is {{isbordered?'ON':'OFF'}}
+  </div>
+  <div>
+    <p>type one</p>
+    <div [class.bordered]="1==1">
+      [class.my-class]="step=='step1'"
+    </div>
+    <p>type two</p>
+    <div [ngClass]="{bordered:1==1}">
+      [ngClass]="{{ '{' }}'my-class': step=='step1'{{ '}' }}"
+    </div>
+    <div [ngClass]="{bordered:1==1}" ngNonBindable>
+      [ngClass]="{{ '{' }}'my-class': step=='step1'{{ '}' }}"
+    </div>
+
+    <p>type three</p>
+    <div [ngClass]="{'1':'bordered','2':'test'}['1']">
+      [ngClass]="{{ '{' }}'1':'my-class1','2':'my-class2','3':'my-class4'{{ '}' }}[step]"
+    </div>
+    <p>type four</p>
+    <div [ngClass]="(1==1)?'bordered':''">
+      [ngClass]="(step=='step1')?'my-class1':'my-class2'"
+    </div>
+  </div>
+</div>
+<div class="container">
+  <h3>NgFor</h3>
+  <div>
+    <p>
+      <i>
+        simple list of strings
+      </i>
+    </p>
+    <ul>
+      <li *ngFor="let city of cities">
+        {{city}}</li>
+    </ul>
+  </div>
+  <div>
+    <p>
+      <i> list of objects
+      </i>
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>City</th>
+        </tr>
+      </thead>
+      <tr *ngFor="let p of people">
+        <td>{{p.name}}</td>
+        <td>{{p.age}}</td>
+        <td>{{p.city}}</td>
+      </tr>
+    </table>
+  </div>
+  <div>
+    <p>
+      <i>nested data</i>
+    </p>
+    <div *ngFor="let item of peopleByCity">
+      <h4>{{item.city}}</h4>
+      <table>
+        <thead>
+          <th>Name</th>
+          <th>Age</th>
+        </thead>
+        <tr *ngFor="let p of item.people">
+          <td>{{p.name}}</td>
+          <td>{{p.age}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div>
+    <p>
+      <i>list with index</i>
+    </p>
+    <ul>
+      <li *ngFor="let c of cities;let num=index">
+        {{num+1}}-{{c}}
+      </li>
+    </ul>
+  </div>
+</div>
+<div>
+  <h3>NgNonBindable</h3>
+  <span class="bordered">{{content}}</span>
+  <span ngNonBindable>&larr;this is what {{content}} rendered!</span>
 </div>
