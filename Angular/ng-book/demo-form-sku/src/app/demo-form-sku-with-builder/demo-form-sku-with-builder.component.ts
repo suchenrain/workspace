@@ -1,26 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup } from "@angular/forms";
 
 @Component({
-  selector: 'inventory-app-demo-form-sku-with-builder',
-  templateUrl: './demo-form-sku-with-builder.component.html',
-  styleUrls: ['./demo-form-sku-with-builder.component.css']
+  selector: "inventory-app-demo-form-sku-with-builder",
+  templateUrl: "./demo-form-sku-with-builder.component.html",
+  styleUrls: ["./demo-form-sku-with-builder.component.css"]
 })
 export class DemoFormSkuWithBuilderComponent implements OnInit {
-
   myForm: FormGroup;
 
   constructor(fb: FormBuilder) {
     this.myForm = fb.group({
-      'sku': ['Abc123']
-    })
+      sku: ["Abc123"]
+    });
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   onSubmit(value: string): void {
-    console.log('you submitted value:', value);
+    console.log("you submitted value:", value);
   }
-
 }

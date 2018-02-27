@@ -1,18 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'inventory-app-demo-form-sku',
-  templateUrl: './demo-form-sku.component.html',
-  styleUrls: ['./demo-form-sku.component.css']
+  selector: "inventory-app-demo-form-sku",
+  templateUrl: "./demo-form-sku.component.html",
+  styleUrls: ["./demo-form-sku.component.css"]
 })
 export class DemoFormSkuComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   onSubmit(form: any): void {
-    console.log('you submit value:' , form);
+    console.log("you submit value:", form);
   }
 }
