@@ -1,0 +1,6 @@
+<h2>More Requests</h2>
+<button type="button" (click)="makePost()">Make Post</button>
+<button type="button" (click)="this.makeDelete()">Make Delete</button>
+<button type="button" (click)="this.makeHeaders()">Make Headers</button>
+<div *ngIf="loading">loading...</div>
+<pre>{{data | json}}</pre>
