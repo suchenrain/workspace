@@ -12,6 +12,7 @@ export class ProductComponent implements OnInit {
 
   constructor(private route: ActivatedRoute) {
     this.route.params.subscribe(params => {
+      this.id = params.id;
       console.log("params:", params);
     });
     this.route.fragment.subscribe(fragment => {
@@ -20,9 +21,9 @@ export class ProductComponent implements OnInit {
     this.route.queryParams.subscribe(qp => {
       console.log("queryParams:", qp);
     });
-    this.route.queryParamMap.subscribe(qpm=>{
-      console.log("queryParamMap",qpm);
-    })
+    this.route.queryParamMap.subscribe(qpm => {
+      console.log("queryParamMap", qpm);
+    });
   }
 
   ngOnInit() {}
