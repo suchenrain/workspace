@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Utilities } from '@Chen/Common';
+import { Utilities } from '@chen/common';
 
 @Component({
   selector: 'inventory-app-root',
