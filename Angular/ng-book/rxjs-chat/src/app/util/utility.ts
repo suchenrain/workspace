@@ -1,5 +1,11 @@
 import { IUtility } from "./utility.interface";
-
+/**
+ * a implementation of interface utility
+ * 
+ * @export
+ * @class Utility
+ * @implements {IUtility}
+ */
 export class Utility implements IUtility {
     uuid(): string {
         let result = '';

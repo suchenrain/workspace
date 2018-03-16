@@ -8,14 +8,15 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es5",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
+    "baseUrl": "./src",
     "paths": {
       "@chen/common": [
         "app/util/index.ts"
       ]
     },
+    "typeRoots": [
+      "node_modules/@types"
+    ],
     "lib": [
       "es2017",
       "dom"
