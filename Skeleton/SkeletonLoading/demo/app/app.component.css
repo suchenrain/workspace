@@ -1,0 +1,11 @@
+.container {
+    width: 900px;
+    margin: 100px auto;
+}
+.w3-code{
+    width: auto;
+    background-color: #f5f3f3;
+    padding: 8px 12px;
+    border-left: 4px solid #4CAF50;
+    word-wrap: break-word;
+}

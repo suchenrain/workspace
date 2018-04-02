@@ -1,0 +1,8 @@
+<svg version="1.1" *ngIf="isLoading"
+    [attr.preserveAspectRatio]="preserveAspectRatio"
+    [attr.viewBox]="viewBox">
+        <ng-content></ng-content>
+</svg>
+
+<ng-content select="[after-loading]" *ngIf="!isLoading"></ng-content>
+
