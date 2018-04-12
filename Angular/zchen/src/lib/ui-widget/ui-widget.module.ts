@@ -1,9 +1,9 @@
 import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
+import { SharedModule } from "../common";
 import { SmartImageComponent } from "./smart-image/smart-image.component";
 
 @NgModule({
-  imports: [CommonModule],
+  imports: [SharedModule.forRoot()],
   declarations: [SmartImageComponent],
   exports: [SmartImageComponent]
 })

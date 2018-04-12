@@ -1,7 +1,7 @@
 import { NgModule, Provider, ModuleWithProviders } from "@angular/core";
-import { WindowRef } from "./window/window-ref.service";
+import { WindowRef } from "./in-viewport/window/window-ref.service";
 
-import { InViewportDirective } from "./in-viewport.directive";
+import { InViewportDirective } from "./in-viewport/in-viewport.directive";
 
 const defaultProviders: Array<Provider> = [
   { provide: WindowRef, useValue: window }
@@ -18,7 +18,7 @@ const defaultProviders: Array<Provider> = [
   declarations: [InViewportDirective],
   exports: [InViewportDirective]
 })
-export class InViewportModule {
+export class SharedModule {
   /**
    * Specify a static method for root module to ensure providers are only provided once
    * but allows the module to still be imported into other modules without reproviding
@@ -32,7 +32,7 @@ export class InViewportModule {
     providers: Provider[] = defaultProviders
   ): ModuleWithProviders {
     return {
-      ngModule: InViewportModule,
+      ngModule: SharedModule,
       providers: providers
     };
   }

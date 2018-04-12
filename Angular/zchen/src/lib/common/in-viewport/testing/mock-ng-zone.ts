@@ -7,7 +7,7 @@ export class MockNgZone extends NgZone {
     super({ enableLongStackTrace: false });
   }
   set onStable(v) {}
-  get onUnstable() {
+  get onStable() {
     return this._mockOnStable;
   }
   run(fn: Function): any {

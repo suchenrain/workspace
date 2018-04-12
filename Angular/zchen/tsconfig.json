@@ -10,14 +10,10 @@
     "experimentalDecorators": true,
     "target": "es5",
     "paths": {
-      "@zchen/widget": ["lib/ui-widget"]
+      "@zchen/widget": ["lib/ui-widget"],
+      "@zchen/common": ["lib/common"]
     },
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "es2017",
-      "dom"
-    ]
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2017", "dom"]
   }
 }

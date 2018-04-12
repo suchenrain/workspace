@@ -6,6 +6,7 @@ import {
   ElementRef,
   Renderer2
 } from "@angular/core";
+import { InViewportDirective } from "../../common";
 
 @Component({
   selector: "zc-smart-image",
@@ -13,11 +14,19 @@ import {
   styleUrls: ["./smart-image.component.css"]
 })
 export class SmartImageComponent implements OnInit {
-  @Input() src: string;
+  private loaded: boolean = false;
   @Input() tinySrc: string;
+  @Input() src: string;
+  @ViewChild(InViewportDirective) viewportRef: InViewportDirective;
   @ViewChild("container") placeholder: ElementRef;
   @ViewChild("tiny") tiny: ElementRef;
+
   constructor(private renderer: Renderer2) {}
+
+  onInViewportChange(state: boolean) {
+    console.log("i am in viewport:", state);
+    this.renderRealPic();
+  }
 
   ngOnInit() {
     console.log(this.src);
@@ -26,15 +35,23 @@ export class SmartImageComponent implements OnInit {
   ngAfterViewInit() {
     this.renderer.listen(this.tiny.nativeElement, "load", () => {
       this.renderer.addClass(this.tiny.nativeElement, "loaded");
+      this.renderRealPic();
     });
 
-    const img = this.renderer.createElement("img");
-    this.renderer.appendChild(this.placeholder.nativeElement, img);
-    this.renderer.setAttribute(img, "src", this.src);
+    
+  }
 
-    // console.log(img);
-    this.renderer.listen(img, "load", () => {
-      this.renderer.addClass(img, "loaded");
-    });
+  renderRealPic() {
+    if (this.viewportRef.isInViewport && !this.loaded) {
+      const img = this.renderer.createElement("img");
+      this.renderer.appendChild(this.placeholder.nativeElement, img);
+      this.renderer.setAttribute(img, "src", this.src);
+
+      this.loaded = true;
+      // console.log(img);
+      this.renderer.listen(img, "load", () => {
+        this.renderer.addClass(img, "loaded");
+      });
+    }
   }
 }
