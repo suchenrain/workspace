@@ -17,7 +17,7 @@
 .placeholder img.loaded {
   opacity: 1;
 }
-.img-tiny {
+.img-dummy {
   filter: blur(50px);
   /* this is needed so Safari keeps sharp edges */
   transform: scale(1);

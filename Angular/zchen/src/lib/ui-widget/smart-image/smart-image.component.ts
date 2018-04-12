@@ -7,51 +7,43 @@ import {
   Renderer2
 } from "@angular/core";
 import { InViewportDirective } from "../../common";
-
+import { DefaultSmartImage } from "./default.data";
 @Component({
-  selector: "zc-smart-image",
+  selector: "zc-smart-img",
   templateUrl: "./smart-image.component.html",
   styleUrls: ["./smart-image.component.css"]
 })
 export class SmartImageComponent implements OnInit {
-  private loaded: boolean = false;
-  @Input() tinySrc: string;
+  @Input() dummy: string;
   @Input() src: string;
-  @ViewChild(InViewportDirective) viewportRef: InViewportDirective;
-  @ViewChild("container") placeholder: ElementRef;
-  @ViewChild("tiny") tiny: ElementRef;
+  @Input() aspectRatio: number = DefaultSmartImage.aspectRatio; //高宽比
+
+  @ViewChild("dummyImg") private dummyRef: ElementRef;
+  @ViewChild("realImg") private realImgRef: ElementRef;
+  @ViewChild(InViewportDirective) private viewportRef: InViewportDirective;
+
+  public loadSrc: string = "";
+  public dummySrc: string = "";
+  private loaded: boolean = false;
 
   constructor(private renderer: Renderer2) {}
 
+  ngOnInit() {}
+
+  ngAfterViewInit() {}
+  onImagePreload() {
+    this.renderer.addClass(this.dummyRef.nativeElement, "loaded");
+  }
+  onImagePreloadError() {}
+  onImageLoad() {
+    this.renderer.addClass(this.realImgRef.nativeElement, "loaded");
+    this.renderer.setStyle(this.realImgRef.nativeElement, "z-index", "999");
+    this.loaded = true;
+  }
   onInViewportChange(state: boolean) {
-    console.log("i am in viewport:", state);
-    this.renderRealPic();
-  }
-
-  ngOnInit() {
-    console.log(this.src);
-  }
-
-  ngAfterViewInit() {
-    this.renderer.listen(this.tiny.nativeElement, "load", () => {
-      this.renderer.addClass(this.tiny.nativeElement, "loaded");
-      this.renderRealPic();
-    });
-
-    
-  }
-
-  renderRealPic() {
-    if (this.viewportRef.isInViewport && !this.loaded) {
-      const img = this.renderer.createElement("img");
-      this.renderer.appendChild(this.placeholder.nativeElement, img);
-      this.renderer.setAttribute(img, "src", this.src);
-
-      this.loaded = true;
-      // console.log(img);
-      this.renderer.listen(img, "load", () => {
-        this.renderer.addClass(img, "loaded");
-      });
+    if (state && !this.loaded) {
+      this.dummySrc = this.dummy;
+      this.loadSrc = this.src;
     }
   }
 }

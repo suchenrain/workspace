@@ -1,5 +1,5 @@
-<div class="placeholder" ref-container zcInViewport (inViewportChange)="onInViewportChange($event)">
-  <img [src]="tinySrc" class="img-tiny" ref-tiny>
-  <div class="" style="padding-bottom: 45.6%;"></div>
-
+<div class="placeholder">
+  <img ref-dummyImg [src]="dummySrc" class="img-dummy"  (load)="onImagePreload()" (error)="onImagePreloadError()" alt="">
+  <div class="" [style.padding-bottom.%]="aspectRatio"></div>
+  <img ref-realImg zcInViewport [src]="loadSrc" (load)="onImageLoad()" alt="" (inViewportChange)="onInViewportChange($event)">
 </div>
