@@ -25,27 +25,34 @@ export class SmartImageComponent implements OnInit {
   @ViewChild(InViewportDirective) private viewportRef: InViewportDirective;
 
   private loaded: boolean = false;
-
+  private dummyLoaded: boolean = false;
   constructor(private renderer: Renderer2) {}
 
   ngOnInit() {}
 
-  ngAfterViewInit() {
-    // if (this.viewportRef.isInViewport) {
-    //   //trigger dummy image load if current elemnt is in viewport
-    //   this.renderer.setAttribute(
-    //     this.dummyRef.nativeElement,
-    //     "src",
-    //     this.dummy
-    //   );
-    // }
-  }
+  ngAfterViewInit() {}
   //once dummy loaded
   onImagePreload() {
+    this.dummyLoaded = true;
     this.renderer.addClass(this.dummyRef.nativeElement, "loaded");
-    this.renderer.setAttribute(this.realImgRef.nativeElement, "src", this.src);
+    if (this.viewportRef.isInViewport) {
+      this.renderer.setAttribute(
+        this.realImgRef.nativeElement,
+        "src",
+        this.src
+      );
+    }
   }
-  onImagePreloadError() {}
+  onImagePreloadError() {
+    this.dummyLoaded = true;
+    if (this.viewportRef.isInViewport) {
+      this.renderer.setAttribute(
+        this.realImgRef.nativeElement,
+        "src",
+        this.src
+      );
+    }
+  }
   //once real img loaded
   onImageLoad() {
     this.renderer.addClass(this.realImgRef.nativeElement, "loaded");
@@ -53,11 +60,18 @@ export class SmartImageComponent implements OnInit {
     this.loaded = true;
   }
   onInViewportChange(state: boolean) {
-    if (state && !this.loaded) {
+    if (state && !this.dummyLoaded) {
       this.renderer.setAttribute(
         this.dummyRef.nativeElement,
         "src",
         this.dummy
+      );
+    }
+    if (state && this.dummyLoaded && !this.loaded) {
+      this.renderer.setAttribute(
+        this.realImgRef.nativeElement,
+        "src",
+        this.src
       );
     }
   }
