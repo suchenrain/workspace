@@ -30,7 +30,9 @@ export class SmartImageComponent implements OnInit {
 
   ngOnInit() {}
 
-  ngAfterViewInit() {}
+  ngAfterViewInit() {
+
+  }
   //once dummy loaded
   onImagePreload() {
     this.dummyLoaded = true;
@@ -60,13 +62,6 @@ export class SmartImageComponent implements OnInit {
     this.loaded = true;
   }
   onInViewportChange(state: boolean) {
-    if (state && !this.dummyLoaded) {
-      this.renderer.setAttribute(
-        this.dummyRef.nativeElement,
-        "src",
-        this.dummy
-      );
-    }
     if (state && this.dummyLoaded && !this.loaded) {
       this.renderer.setAttribute(
         this.realImgRef.nativeElement,
