@@ -1,5 +1,5 @@
 <div class="placeholder" zcInViewport (inViewportChange)="onInViewportChange($event)">
-  <img ref-dummyImg  class="img-dummy"  (load)="onImagePreload()" (error)="onImagePreloadError()" alt="">
+  <img ref-dummyImg class="img-dummy" (load)="onImagePreload()" (error)="onImagePreloadError()" alt="">
   <div class="" [style.padding-bottom.%]="aspectRatio"></div>
-  <img ref-realImg  (load)="onImageLoad()" alt="" >
+  <img ref-realImg (load)="onImageLoad()" (error)="onImageError()" alt="">
 </div>

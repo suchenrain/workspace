@@ -24,14 +24,21 @@ import * as eventData from "./shared/event-data";
 /**
  * A simple lightweight library for Angular with no
  * external dependencies that detects when an element is within the
- * browser viewport and adds a `in-viewport` or `out-viewport` class
+ * browser viewport and adds a `zc-viewport-in` or `zc-viewport-out` class
  * to the element.
  *
  * @example
  * ```html
  * <p
  *  class="foo"
- *
+ *  zcInViewport
+ *  (inViewportChange)="yourEventHandler($event)"
+ * [debounce]="300">
+ * some text here
+ * </p>
+ * ```
+ * @author pawn zhuang at 2018/4/12
+ * @version v1.1
  */
 @Directive({
   selector: "[zcInViewport]",

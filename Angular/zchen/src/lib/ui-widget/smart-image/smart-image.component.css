@@ -13,9 +13,27 @@
   width: 100%;
   transition: opacity 1s linear;
 }
+.placeholder img.random-dummy {
+  height: 100%;
+}
 
 .placeholder img.loaded {
   opacity: 1;
+}
+.placeholder img.load-failed {
+  opacity: 1;
+  z-index: 999;
+  background-color: #dcd9d9;
+  height: 100%;
+}
+.placeholder img.load-failed::after {
+  content: "Not Found";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 2em;
+  color: #a9a9a9;
 }
 .img-dummy {
   filter: blur(50px);
