@@ -1,4 +1,7 @@
 <div class="placeholder" zcInViewport (inViewportChange)="onInViewportChange($event)">
+  <div *ngIf="!dummyLoaded" class="loading-text  pulse animated">
+    Loading...
+  </div>
   <img ref-dummyImg class="img-dummy" (load)="onImagePreload()" (error)="onImagePreloadError()" alt="">
   <div class="" [style.padding-bottom.%]="aspectRatio"></div>
   <img ref-realImg (load)="onImageLoad()" (error)="onImageError()" alt="">

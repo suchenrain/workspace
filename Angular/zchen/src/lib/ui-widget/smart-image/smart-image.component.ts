@@ -101,7 +101,7 @@ export class SmartImageComponent implements OnInit {
    * @type {boolean}
    * @memberof SmartImageComponent
    */
-  private dummyLoaded: boolean = false;
+  public dummyLoaded: boolean = false;
 
   constructor(private renderer: Renderer2) {}
 

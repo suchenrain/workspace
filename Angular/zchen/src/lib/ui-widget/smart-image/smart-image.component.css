@@ -34,9 +34,66 @@
   height: 100%;
   font-size: 2em;
   color: #a9a9a9;
+  position: relative;
+  font-family: sans-serif;
 }
 .img-dummy {
   filter: blur(50px);
   /* this is needed so Safari keeps sharp edges */
   transform: scale(1);
+}
+
+.placeholder .loading-text {
+  position: absolute;
+  top: 45%;
+  left: 47%;
+  color: #ccc;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+.placeholder .animated {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+.placeholder .pulse {
+  animation-name: pulse;
+  /* animation-duration: 5s; */
+}
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.loading-text {
+  left: 47%;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+@media (max-width: 540px){}
+.loading-text {
+    left: 47% !important;
+}
+
+@media (max-width: 767px){}
+.loading-text {
+    left: 47% !important;
 }
