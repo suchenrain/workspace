@@ -1,11 +1,9 @@
-import { NgModule, Provider, ModuleWithProviders } from "@angular/core";
-import { WindowRef } from "./in-viewport/window/window-ref.service";
+import { NgModule, Provider, ModuleWithProviders } from '@angular/core';
+import { WindowRef } from './in-viewport/window/window-ref.service';
 
-import { InViewportDirective } from "./in-viewport/in-viewport.directive";
+import { InViewportDirective } from './in-viewport/in-viewport.directive';
 
-const defaultProviders: Array<Provider> = [
-  { provide: WindowRef, useValue: window }
-];
+const defaultProviders: Array<Provider> = [{ provide: WindowRef, useValue: window }];
 /**
  * A simple lightweight library for Angular with other dependencies
  * that detects when an element is within the browser viewport and adds a
@@ -28,9 +26,7 @@ export class SharedModule {
    * @returns {ModuleWithProviders}
    * @memberof InViewportModule
    */
-  public static forRoot(
-    providers: Provider[] = defaultProviders
-  ): ModuleWithProviders {
+  public static forRoot(providers: Provider[] = defaultProviders): ModuleWithProviders {
     return {
       ngModule: SharedModule,
       providers: providers
